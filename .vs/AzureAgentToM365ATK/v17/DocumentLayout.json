@@ -1,12 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\davrous\\source\\repos\\AzureAgentToM365ATK\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{2ABC173C-7711-F185-2E3C-6BBB5FE3EC40}|AzureAgentToM365ATK\\AzureAgentToM365ATK.csproj|c:\\users\\davrous\\source\\repos\\azureagenttom365atk\\azureagenttom365atk\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{2ABC173C-7711-F185-2E3C-6BBB5FE3EC40}|AzureAgentToM365ATK\\AzureAgentToM365ATK.csproj|solutionrelative:azureagenttom365atk\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\s\\gh\\examples\\AzureAgentToM365\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,20 +9,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": -1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\davrous\\source\\repos\\AzureAgentToM365ATK\\AzureAgentToM365ATK\\appsettings.json",
-              "RelativeDocumentMoniker": "AzureAgentToM365ATK\\appsettings.json",
-              "ToolTip": "C:\\Users\\davrous\\source\\repos\\AzureAgentToM365ATK\\AzureAgentToM365ATK\\appsettings.json",
-              "RelativeToolTip": "AzureAgentToM365ATK\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-24T20:28:15.501Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             }
           ]
         }
