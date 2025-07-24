@@ -2,12 +2,14 @@
 // Licensed under the MIT License.
 
 // Use this flag to enable the Playground mode, which allows the agent to run without user authentication.
-//#define PLAYGROUND
+#define PLAYGROUND
 
 
 using Azure;
 using Azure.AI.Agents.Persistent;
+#if PLAYGROUND
 using Azure.Identity;
+#endif
 using Microsoft.Agents.Builder;
 using Microsoft.Agents.Builder.App;
 using Microsoft.Agents.Builder.State;
