@@ -152,7 +152,6 @@ public class AzureAgent : AgentApplication
             // Create an instance of the AzureAIAgent with the agent model and client.
             AzureAIAgent _existingAgent = new AzureAIAgent(agentModel, _aiProjectClient);
 
-
             AzureAIAgentThread _agentThread = null; 
             // Get or create thread: 
             string agentThreadId = turnState.Conversation.GetValue<string>("conversation.threadId", () => null);
