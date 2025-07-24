@@ -1,8 +1,13 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+// Use this flag to enable the Playground mode, which allows the agent to run without user authentication.
+#define PLAYGROUND
+
+
 using Azure;
 using Azure.AI.Agents.Persistent;
+using Azure.Identity;
 using Microsoft.Agents.Builder;
 using Microsoft.Agents.Builder.App;
 using Microsoft.Agents.Builder.State;
@@ -53,7 +58,12 @@ public class AzureAgent : AgentApplication
 
         // This is handling the message activity, which will send the user message to the Azure AI Foundry agent.
         // we are also indicating which auth profile we want to have available for this handler.
+#if PLAYGROUND
+        OnActivity(ActivityTypes.Message, SendMessageToAzureAgent);
+#else
         OnActivity(ActivityTypes.Message, SendMessageToAzureAgent, autoSignInHandlers: ["AIFoundry"]);
+#endif
+
     }
 
     /// <summary>
@@ -112,8 +122,6 @@ public class AzureAgent : AgentApplication
     {
         Console.WriteLine($"\nUser message received: {turnContext.Activity.Text}\n");
 
-        // This is a helper class to generate an OBO User Token for the Azure AI Foundry agent from the current user authorization.
-        var WrapUpUserAuth = new UserAuthorizationTokenWrapper(UserAuthorization, turnContext, "AIFoundry");
 
         try
         {
@@ -121,10 +129,17 @@ public class AzureAgent : AgentApplication
             await turnContext.StreamingResponse.QueueInformativeUpdateAsync("Just a moment please..", cancellationToken).ConfigureAwait(false);
 
             // Set up the PersistentAgentsClient to communicate with the Azure AI Foundry agent.
-            PersistentAgentsClient _aiProjectClient = new PersistentAgentsClient(this._connectionStringForAgent, WrapUpUserAuth);
+#if PLAYGROUND
+            PersistentAgentsClient _aiProjectClient = new PersistentAgentsClient(this._connectionStringForAgent, new DefaultAzureCredential());
+#else
+            // This is a helper class to generate an OBO User Token for the Azure AI Foundry agent from the current user authorization.
+            PersistentAgentsClient _aiProjectClient = new PersistentAgentsClient(this._connectionStringForAgent, 
+                        // This is a helper class to generate an OBO User Token for the Azure AI Foundry agent from the current user authorization.
+                        new UserAuthorizationTokenWrapper(UserAuthorization, turnContext, "AIFoundry"));
+#endif
 
             // Get the requested agent by ID.
-            Response <PersistentAgent> agentModel = _agentModelCache.TryGetValue(this._agentId, out var cachedModel) ? cachedModel : null;
+            Response<PersistentAgent> agentModel = _agentModelCache.TryGetValue(this._agentId, out var cachedModel) ? cachedModel : null;
             if (agentModel == null)
             {
                 // subtle hint to the client that the agent model is being fetched.
