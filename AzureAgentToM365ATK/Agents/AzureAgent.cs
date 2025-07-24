@@ -2,7 +2,7 @@
 // Licensed under the MIT License.
 
 // Use this flag to enable the Playground mode, which allows the agent to run without user authentication.
-#define PLAYGROUND
+//#define PLAYGROUND
 
 
 using Azure;
@@ -121,8 +121,6 @@ public class AzureAgent : AgentApplication
     protected async Task SendMessageToAzureAgent(ITurnContext turnContext, ITurnState turnState, CancellationToken cancellationToken)
     {
         Console.WriteLine($"\nUser message received: {turnContext.Activity.Text}\n");
-
-
         try
         {
             // Start a Streaming Process to let clients that support streaming know that we are processing the request. 
@@ -175,6 +173,7 @@ public class AzureAgent : AgentApplication
             // Create a new message to send to the Azure agent
             ChatMessageContent message = new(AuthorRole.User, turnContext.Activity.Text);
             // Send the message to the Azure agent and get the response
+            // This will handle text responses,  if you want to handle attachments and other content types, you would need to extend this method.
             await foreach (StreamingChatMessageContent response in _existingAgent.InvokeStreamingAsync(message, _agentThread))
             {
                 if(!string.IsNullOrEmpty(response.Content))
