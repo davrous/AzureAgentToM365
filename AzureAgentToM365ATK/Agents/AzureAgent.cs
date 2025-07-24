@@ -118,7 +118,7 @@ public class AzureAgent : AgentApplication
         try
         {
             // Start a Streaming Process to let clients that support streaming know that we are processing the request. 
-            await turnContext.StreamingResponse.QueueInformativeUpdateAsync("Working on a response for you", cancellationToken).ConfigureAwait(false);
+            await turnContext.StreamingResponse.QueueInformativeUpdateAsync("Just a moment please..", cancellationToken).ConfigureAwait(false);
 
             // Set up the PersistentAgentsClient to communicate with the Azure AI Foundry agent.
             PersistentAgentsClient _aiProjectClient = new PersistentAgentsClient(this._connectionStringForAgent, WrapUpUserAuth);
@@ -128,7 +128,7 @@ public class AzureAgent : AgentApplication
             if (agentModel == null)
             {
                 // subtle hint to the client that the agent model is being fetched.
-                await turnContext.StreamingResponse.QueueInformativeUpdateAsync("Working on a response for you..", cancellationToken).ConfigureAwait(false);
+                await turnContext.StreamingResponse.QueueInformativeUpdateAsync("Arranging deck chairs.", cancellationToken).ConfigureAwait(false);
 
                 // If the agent model is not found in the conversation state, fetch it from the Azure AI Foundry project.
                 agentModel = await _aiProjectClient.Administration.GetAgentAsync(this._agentId).ConfigureAwait(false);
@@ -155,7 +155,7 @@ public class AzureAgent : AgentApplication
             }
 
             // Inform the client that we are working on a response
-            await turnContext.StreamingResponse.QueueInformativeUpdateAsync("Working on a response for you...", cancellationToken).ConfigureAwait(false);
+            await turnContext.StreamingResponse.QueueInformativeUpdateAsync("Flagging stock traders down..", cancellationToken).ConfigureAwait(false);
 
             // Create a new message to send to the Azure agent
             ChatMessageContent message = new(AuthorRole.User, turnContext.Activity.Text);
