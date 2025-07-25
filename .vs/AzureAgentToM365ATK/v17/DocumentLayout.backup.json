@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\davrous\\source\\repos\\AzureAgentToM365ATK\\",
+  "WorkspaceRootPath": "C:\\s\\gh\\examples\\a1\\AzureAgentToM365\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2ABC173C-7711-F185-2E3C-6BBB5FE3EC40}|AzureAgentToM365ATK\\AzureAgentToM365ATK.csproj|c:\\users\\davrous\\source\\repos\\azureagenttom365atk\\azureagenttom365atk\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{2ABC173C-7711-F185-2E3C-6BBB5FE3EC40}|AzureAgentToM365ATK\\AzureAgentToM365ATK.csproj|solutionrelative:azureagenttom365atk\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{2ABC173C-7711-F185-2E3C-6BBB5FE3EC40}|AzureAgentToM365ATK\\AzureAgentToM365ATK.csproj|c:\\s\\gh\\examples\\a1\\azureagenttom365\\azureagenttom365atk\\azureagenttom365atk.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{2ABC173C-7711-F185-2E3C-6BBB5FE3EC40}|AzureAgentToM365ATK\\AzureAgentToM365ATK.csproj|solutionrelative:azureagenttom365atk\\azureagenttom365atk.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +14,31 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\davrous\\source\\repos\\AzureAgentToM365ATK\\AzureAgentToM365ATK\\appsettings.json",
-              "RelativeDocumentMoniker": "AzureAgentToM365ATK\\appsettings.json",
-              "ToolTip": "C:\\Users\\davrous\\source\\repos\\AzureAgentToM365ATK\\AzureAgentToM365ATK\\appsettings.json",
-              "RelativeToolTip": "AzureAgentToM365ATK\\appsettings.json",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABUAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-24T20:28:15.501Z",
+              "Title": "AzureAgentToM365ATK",
+              "DocumentMoniker": "C:\\s\\gh\\examples\\a1\\AzureAgentToM365\\AzureAgentToM365ATK\\AzureAgentToM365ATK.csproj",
+              "RelativeDocumentMoniker": "AzureAgentToM365ATK\\AzureAgentToM365ATK.csproj",
+              "ToolTip": "C:\\s\\gh\\examples\\a1\\AzureAgentToM365\\AzureAgentToM365ATK\\AzureAgentToM365ATK.csproj",
+              "RelativeToolTip": "AzureAgentToM365ATK\\AzureAgentToM365ATK.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-24T18:18:02.705Z",
               "EditorCaption": ""
             }
           ]
