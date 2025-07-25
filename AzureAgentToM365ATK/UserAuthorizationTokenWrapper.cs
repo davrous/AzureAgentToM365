@@ -49,7 +49,7 @@ namespace AzureAgentToM365ATK
             }
 
             // Exchange the turn token for a JWT token for AI Foundry using the UserAuthorization service.
-            var jwtToken = await _userAuthorization.ExchangeTurnTokenAsync(_turnContext, exchangeScopes: scp, exchangeConnection: "BotServiceConnection", handlerName: _handlerName, cancellationToken: cancellationToken).ConfigureAwait(false);
+            var jwtToken = await _userAuthorization.ExchangeTurnTokenAsync(_turnContext, exchangeScopes: scp, handlerName: _handlerName, cancellationToken: cancellationToken).ConfigureAwait(false);
 
             // Convert the JWT token to a Azure AccessToken.
             var handler = new JwtSecurityTokenHandler();
