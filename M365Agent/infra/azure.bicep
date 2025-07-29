@@ -53,11 +53,11 @@ resource webApp 'Microsoft.Web/sites@2021-02-01' = {
           value: '1'
         }
         {
-          name: 'Connections__BotServiceConnection__Settings__ClientId'
+          name: 'Connections__ServiceConnection__Settings__ClientId'
           value: identity.properties.clientId
         }
         {
-          name: 'Connections__BotServiceConnection__Settings__TenantId'
+          name: 'Connections__ServiceConnection__Settings__TenantId'
           value: identity.properties.tenantId
         }
         {
