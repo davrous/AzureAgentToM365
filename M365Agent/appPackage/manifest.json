@@ -34,15 +34,17 @@
     {
       "botId": "${{BOT_ID}}",
       "scopes": [
-        "personal",
-        "team",
-        "groupChat"
+        "copilot",
+        "personal"
       ],
       "supportsFiles": false,
       "isNotificationOnly": false,
       "commandLists": [
         {
-          "scopes": [ "personal", "team", "groupChat" ],
+          "scopes": [
+            "copilot",
+            "personal"
+          ],
           "commands": [
             {
               "title": "How can you help me?",

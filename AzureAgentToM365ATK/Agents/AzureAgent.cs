@@ -4,7 +4,6 @@
 // Use this flag to enable the Playground mode, which allows the agent to run without user authentication.
 #define PLAYGROUND
 
-
 using Azure;
 using Azure.AI.Agents.Persistent;
 #if PLAYGROUND

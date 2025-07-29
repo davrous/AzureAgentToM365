@@ -2,6 +2,11 @@
 @minLength(4)
 @description('Used to generate names for all resources in this file')
 param resourceBaseName string
+@secure()
+param azureOpenAIApiKey string
+
+param azureOpenAIEndpoint string
+param azureOpenAIDeploymentName string
 
 param webAppSKU string
 
@@ -37,9 +42,14 @@ resource webApp 'Microsoft.Web/sites@2021-02-01' = {
     serverFarmId: serverfarm.id
     httpsOnly: true
     siteConfig: {
+      alwaysOn: true
       appSettings: [
         {
           name: 'WEBSITE_RUN_FROM_PACKAGE'
+          value: '1'
+        }
+        {
+          name: 'RUNNING_ON_AZURE'
           value: '1'
         }
         {
@@ -53,6 +63,18 @@ resource webApp 'Microsoft.Web/sites@2021-02-01' = {
         {
           name: 'TokenValidation__Audiences__0'
           value: identity.properties.clientId
+        }
+        {
+          name: 'Azure__OpenAIApiKey'
+          value: azureOpenAIApiKey
+        }
+        {
+          name: 'Azure__OpenAIEndpoint'
+          value: azureOpenAIEndpoint
+        }
+        {
+          name: 'Azure__OpenAIDeploymentName'
+          value: azureOpenAIDeploymentName
         }
       ]
       ftpsState: 'FtpsOnly'

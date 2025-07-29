@@ -47,6 +47,7 @@ provision:
     with:
       # Path to manifest template
       manifestPath: ./appPackage/manifest.json
+
   # Build Teams app package with latest env value
   - uses: teamsApp/zipAppPackage
     with:
@@ -54,6 +55,7 @@ provision:
       manifestPath: ./appPackage/manifest.json
       outputZipPath: ./appPackage/build/appPackage.${{TEAMSFX_ENV}}.zip
       outputFolder: ./appPackage/build
+
   # Validate app package using validation rules
   - uses: teamsApp/validateAppPackage
     with:
@@ -66,6 +68,16 @@ provision:
     with:
       # Relative path to this file. This is the path for built zip file.
       appPackagePath: ./appPackage/build/appPackage.${{TEAMSFX_ENV}}.zip
+
+  - uses: teamsApp/extendToM365
+    with:
+      # Relative path to the build app package.
+      appPackagePath: ./appPackage/build/appPackage.${{TEAMSFX_ENV}}.zip
+    # Write the information of created resources into environment file for
+    # the specified environment variable(s).
+    writeToEnvironmentFile:
+      titleId: M365_TITLE_ID
+      appId: M365_APP_ID
 
 # Triggered when 'teamsapp deploy' is executed
 deploy:
@@ -85,4 +97,4 @@ deploy:
       # or add it to your environment variable file.
       resourceId: ${{BOT_AZURE_APP_SERVICE_RESOURCE_ID}}
       workingDirectory: ../AzureAgentToM365ATK
-projectId: ee0be2ac-8fcb-43b5-b815-7ecc3d67db7e
+projectId: a5ce45d0-c7f9-4964-828d-957cfa33b952
