@@ -15,7 +15,7 @@ Then, create an Agent in the Azure AI Foundry portal, under the project part. Co
 
 If you're looking for a sample on how to create your Foundry agent, check the tutorial at the end to create the Stock Agent to query an API to get a specific stock value on a specific timeslot.
 
-If you're not familiar yet with Azure AI Foundry Projet & Agent Service:
+If you're not familiar yet with Azure AI Foundry Project & Agent Service:
 - [Announcing Developer Essentials for Agents and Apps in Azure AI Foundry](https://devblogs.microsoft.com/foundry/announcing-developer-essentials-for-agents-and-apps-in-azure-ai-foundry/)
 - [Announcing General Availability of Azure AI Foundry Agent Service](https://techcommunity.microsoft.com/blog/azure-ai-services-blog/announcing-general-availability-of-azure-ai-foundry-agent-service/4414352) 
 
