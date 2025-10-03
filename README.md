@@ -46,7 +46,7 @@ Next step is to make it available via a public URL with a Dev Tunnel, create a A
 
 To deploy it in Teams or M365 Copilot, you'll need to also update the '**manifest.json**' file, zip the folder and upload it to Teams / M365 Copilot via the App maangement UX. 
 
-Otherwise, use hte Microsoft 365 Agents Toolkit to simplify those steps. 
+Otherwise, use the Microsoft 365 Agents Toolkit to simplify those steps. 
 
 # With M365 Agents Toolkit
 
