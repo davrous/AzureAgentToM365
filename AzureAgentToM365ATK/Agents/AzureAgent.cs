@@ -192,7 +192,7 @@ public class AzureAgent : AgentApplication
     private static AgentThread GetConversationThread(AIAgent agent, ITurnState turnState)
     {
         AgentThread thread;
-        string? agentThreadInfo = turnState.Conversation.GetValue<string?>("conversation.threadInfo", () => null);
+        string agentThreadInfo = turnState.Conversation.GetValue<string>("conversation.threadInfo", () => null);
         if (string.IsNullOrEmpty(agentThreadInfo))
         {
             thread = agent.GetNewThread();
