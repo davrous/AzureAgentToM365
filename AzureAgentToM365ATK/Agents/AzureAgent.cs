@@ -18,6 +18,7 @@ using Microsoft.Agents.AI;
 using System.Text.Json;
 using Microsoft.Agents.Core.Serialization;
 using Microsoft.Extensions.AI;
+using Microsoft.Agents.AI.AzureAI;
 
 namespace AzureAgentToM365ATK.Agent;
 
